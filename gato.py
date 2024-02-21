@@ -23,7 +23,7 @@ CROSS_COLOR = (66, 66, 66)
 
 # Pantalla
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('Tic Tac Toe')
+pygame.display.set_caption('Juego del gato by Profe Aldo')
 screen.fill(BG_COLOR)
 
 # Tablero (3x3)
