@@ -97,6 +97,7 @@ def ai_move():
 # Función principal del juego
 def main():
     running = True
+    player_turn = 1 #Inicia el jugador humano
     draw_lines()
     pygame.display.update()
 
@@ -104,10 +105,32 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-        
-        # Aquí iría la lógica para manejar los clics y dibujar las marcas de los jugadores
-        # También la comprobación para determinar el fin del juego
+            if event.type == pygame.MOUSEBUTTONDOWN and player_turn == 1:
+                mouseX = event.pos[0]  # Coordenada X del clic
+                mouseY = event.pos[1]  # Coordenada Y del clic
+                
+                clicked_row = int(mouseY // SQUARE_SIZE)
+                clicked_col = int(mouseX // SQUARE_SIZE)
 
+                if board[clicked_row][clicked_col] == 0:
+                    mark_square(clicked_row, clicked_col, 1)
+                    if check_win(1):
+                        running = False
+                    elif check_draw():
+                        running = False
+                    else:
+                        player_turn = 2  # Cambia al turno de la IA
+                    draw_figures()
+                    pygame.display.update()
+                        
+        if player_turn == 2 and not running == False:
+            if ai_move():
+                running = False
+            player_turn = 1
+            draw_figures()
+            pygame.display.update()
+
+        
     pygame.quit()
 
 if __name__ == '__main__':
