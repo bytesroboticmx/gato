@@ -83,6 +83,16 @@ def check_draw():
                 return False
     return True
 
+def ai_move():
+    empty_squares = check_empty_squares()
+    if empty_squares:  # Si hay cuadrados vacíos
+        row, col = random.choice(empty_squares)
+        mark_square(row, col, 2)  # Asumiendo que la IA es el jugador 2
+        if check_win(2):
+            return True
+        if check_draw():
+            return True
+    return False
 
 # Función principal del juego
 def main():
