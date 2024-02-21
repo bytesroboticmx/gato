@@ -1,6 +1,6 @@
 #Descripcion: Juego del gato añadiendo un oponente con IA
 #Autor: Dr. Aldo Gonzalez Vazquez
-#Version: 1.0
+#Version: 2.0
 #Fecha: 20/0272024
 #Completar las siguientes funciones en el juego:
 #Dibujar las líneas del tablero: Implementar la función draw_lines para dibujar las líneas del juego en la pantalla.
