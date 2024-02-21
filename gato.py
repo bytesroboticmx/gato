@@ -76,6 +76,14 @@ def check_win(player):
         return True
     return False
 
+def check_draw():
+    for row in range(BOARD_ROWS):
+        for col in range(BOARD_COLS):
+            if board[row][col] == 0:
+                return False
+    return True
+
+
 # Función principal del juego
 def main():
     running = True
