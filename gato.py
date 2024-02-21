@@ -61,6 +61,21 @@ def draw_figures():
 def mark_square(row, col, player):
     board[row][col] = player
 
+def check_win(player):
+    # Comprueba si el jugador ha ganado
+    # Horizontal, vertical y diagonal
+    for row in range(BOARD_ROWS):
+        if board[row][0] == player and board[row][1] == player and board[row][2] == player:
+            return True
+    for col in range(BOARD_COLS):
+        if board[0][col] == player and board[1][col] == player and board[2][col] == player:
+            return True
+    if board[0][0] == player and board[1][1] == player and board[2][2] == player:
+        return True
+    if board[0][2] == player and board[1][1] == player and board[2][0] == player:
+        return True
+    return False
+
 # Función principal del juego
 def main():
     running = True
