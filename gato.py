@@ -83,6 +83,14 @@ def check_draw():
                 return False
     return True
 
+def check_empty_squares():
+    squares = []
+    for y in range(BOARD_ROWS):
+        for x in range(BOARD_COLS):
+            if board[y][x] == 0:
+                squares.append((y, x))
+    return squares
+
 def ai_move():
     empty_squares = check_empty_squares()
     if empty_squares:  # Si hay cuadrados vacíos
