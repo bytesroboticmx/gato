@@ -2,6 +2,7 @@
 #Autor: Dr. Aldo Gonzalez Vazquez
 #Version: 2.0
 #Fecha: 20/0272024
+#Licencia: MIT
 #Completar las siguientes funciones en el juego:
 #Dibujar las líneas del tablero: Implementar la función draw_lines para dibujar las líneas del juego en la pantalla.
 #Comprobar si un jugador ha ganado: Completar la función check_win para determinar si un jugador ha ganado el juego.
