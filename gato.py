@@ -5,7 +5,7 @@ import sys
 pygame.init()
 
 # Constantes para el tamaño de la pantalla
-WIDTH, HEIGHT = 300, 300
+WIDTH, HEIGHT = 600, 600
 LINE_WIDTH = 15
 BOARD_ROWS = 3
 BOARD_COLS = 3
